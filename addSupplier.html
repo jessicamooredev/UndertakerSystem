@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<TITLE>Add a New Supplier</TITLE>
+</HEAD>
+<link rel="stylesheet" href="addSupplier.css" type="text/css">
+<script src="addSupplier.js">
+</script>
+
+</head>
+
+<body bgcolor ="#000000" style="overflow: hidden">
+
+		<nav id="main_nav">
+			<ul>
+				<li class="main">
+					<a href="">Counter Sales</a>
+				</li>
+				<li class="main">
+					<a href="">Take Funeral Details</a>
+				</li>
+				<li class="main">
+					<a href="">Payments from Customers</a>
+				</li>
+				<li class="main">
+					<a href="placeOrders.html.php">Place Orders</a>
+				</li>
+				<li class="main">
+					<a href="">Receive Goods</a>	
+				</li>
+				<li class="main">
+					<a href="">New Invoices from Suppliers</a>	
+				</li>
+				<li class="main">
+					<a href="">Payments to Suppliers</a>	
+				</li>
+				<li class="main">
+					<a href="">File Maintenance</a>
+					<ul>
+						<li><a href="">Supplier Maintenance</a>
+							<ul>
+								<li><a href="addSupplier.html">Add a New Supplier</a></li>
+								<li><a href="deleteSupplier.html.php">Delete a Supplier</a></li>
+								<li><a href="amendNew.html.php">Amend/View a Supplier</a></li>
+							</ul>
+						</li>
+						<li><a href="">Stock Maintenance</a>
+							<ul>
+								<li><a href="">Add a New Stock Item</a></li>
+								<li><a href="">Delete a Stock Item</a></li>
+								<li><a href="">Amend/View a Stock Item</a></li>
+							</ul>
+						</li>
+						<li><a href="">Customer Maintenance</a>
+							<ul>
+								<li><a href="">Add a New Customer</a></li>
+								<li><a href="">Delete a Customer</a></li>
+								<li><a href="">Amend/View a Customer</a></li>
+							</ul>
+						</li>
+						<li><a href="">Employee Maintenance</a>
+							<ul>
+								<li><a href="">Add a New Employee</a></li>
+								<li><a href="">Delete a Employee</a></li>
+								<li><a href="">Amend/View a Employee</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="main">
+					<a>Reports Menu</a>	
+					<ul>
+						<li><a href="">Funeral Costs Report</a></li>
+						<li><a href="">Stock Report</a></li>
+						<li><a href="">Payments to suppliers Report</a></li>
+						<li><a href="">Supplier Report</a></li>
+						<li><a href="">Payment from Customers Report</a></li>
+					</ul>
+				</li>
+				<li class="main">
+					<a>Quit</a>	
+				</li>
+			</ul>
+		</nav>
+		
+<!--stack overflow was used for the onsubmit tag.--> 
+<form class="addSupplier" action="addSupplier.php"  onsubmit="return confirm('Are you sure you want to add this Supplier?')" method="post" autocomplete="on" >
+	<h1 class="heading">Add a new Supplier</h2>
+	
+	<div class = "nameDiv">
+	<label class="TradingNameLabel" for="TradingName">Trading Name</label>
+	<input type="text" name="TradingName" id="TradingName" pattern="[a-zA-Z0-9\.\s\,]+" title="Can consist of letters and numbers" required /><br><br>
+	
+	<label class ="StreetLabel" for="Street">Street</label>
+	<input type="text" name="Street" id="Street"  pattern="[a-zA-Z0-9\.\s\,]+" title="Can consist of letters and numbers" required /><br><br>
+	
+	<label class ="TownLabel" for="Town">Town</label>
+	<input type="text" name="Town" id="Town" pattern="[a-zA-Z\.\s]+" title="Can only consist of letters" required /><br><br>
+	  
+	<label class ="CountyLabel" for="County">County</label>
+	<input type="text" name="County" id="County" pattern="[a-zA-Z\.\s]+" title="Can only consist of letters" required /><br><br>
+	
+	<label class ="PhoneLabel" for="TelephoneNumber">Phone Number</label>
+	<input type="text" name="TelephoneNumber" id="TelephoneNumber" pattern="[0-9. ()/\-]{1,20}" title="Can consist of numbers and /\- and space " required /><br><br>
+	
+	<label class ="FaxLabel" for="FaxNumber">Fax Number</label>
+	<input type="text" name="FaxNumber" id="FaxNumber" pattern="[0-9. ()/\-]{1,20}" title="Can consist of numbers and /\- and space " /><br><br>
+	
+	<label class ="WebAddLabel" for="WebAddress">Web Address</label>
+	<input type="text" name="WebAddress" id="WebAddress" /><br><br>
+	
+	<label class ="EmailAddLabel" for="EmailAddress">Email Address</label>
+	<input type="text" name="EmailAddress" id="EmailAddress" placeholder="someone@example.com" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}" required /><br><br>
+	
+	</div>
+	
+	<div class="myButton">
+	<input type="submit" value="Save Details" name="submit"/>&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Clear Details" name="reset"/>
+	</div>
+</form>
+
+<img class="middlePic" src="light tree middle.jpg" hspace="20">
+<div class="bottom"> <p class="bottom">A Dying Business-Your Death is Our Business</p></div>
+
+
+</body></html>
+
+</HTML>
